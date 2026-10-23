@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --aa-bg: #0B1120;
+    --aa-surface: #111827;
+    --aa-surface-hover: #1E293B;
+    --aa-border: #1E293B;
+    --aa-border-light: #334155;
+    --aa-text: #F8FAFC;
+    --aa-text-secondary: #94A3B8;
+    --aa-text-muted: #64748B;
+    --aa-brand: #3B82F6;
+    --aa-brand-hover: #2563EB;
+    --aa-accent: #93C5FD;
+}
+
+html, body, #root {
+    background-color: var(--aa-bg);
+    color: var(--aa-text);
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'ss01', 'ss02';
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Manrope', system-ui, sans-serif;
+    letter-spacing: -0.02em;
+}
+
+.font-mono {
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+::selection {
+    background-color: #3B82F6;
+    color: #fff;
+}
+
+/* Subtle scanline / grid texture overlay for the "control room" feel */
+.aa-grid-bg {
+    background-image:
+        linear-gradient(rgba(30, 41, 59, 0.45) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30, 41, 59, 0.45) 1px, transparent 1px);
+    background-size: 56px 56px;
+    background-position: -1px -1px;
+}
+
+.aa-noise {
+    background-image: radial-gradient(rgba(148, 163, 184, 0.05) 1px, transparent 1px);
+    background-size: 3px 3px;
+}
+
+@layer base {
+    :root {
+        --background: 222 47% 8%;
+        --foreground: 210 40% 98%;
+        --card: 222 47% 11%;
+        --card-foreground: 210 40% 98%;
+        --popover: 222 47% 8%;
+        --popover-foreground: 210 40% 98%;
+        --primary: 217 91% 60%;
+        --primary-foreground: 222 47% 8%;
+        --secondary: 217 33% 17%;
+        --secondary-foreground: 210 40% 98%;
+        --muted: 217 33% 17%;
+        --muted-foreground: 215 20% 65%;
+        --accent: 217 33% 17%;
+        --accent-foreground: 210 40% 98%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 210 40% 98%;
+        --border: 215 28% 17%;
+        --input: 215 28% 17%;
+        --ring: 217 91% 60%;
+        --radius: 0.125rem;
+        --chart-1: 217 91% 60%;
+        --chart-2: 199 89% 48%;
+        --chart-3: 161 84% 39%;
+        --chart-4: 38 92% 50%;
+        --chart-5: 0 84% 60%;
+    }
+}
+
+@layer base {
+    * { @apply border-border; }
+    body { @apply bg-background text-foreground; }
+}

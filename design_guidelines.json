@@ -1,0 +1,104 @@
+{
+  "theme": "Dark",
+  "archetype": "Archetype 4 (Swiss & High-Contrast) - Dark Atmospheric Variant",
+  "domain": "Data-Heavy SaaS Dashboard / Air Quality Monitoring",
+  "colors": {
+    "background": {
+      "base": "#0B1120",
+      "surface": "#111827",
+      "surfaceHover": "#1E293B",
+      "glassmorphism": "bg-[#0B1120]/70 backdrop-blur-2xl backdrop-saturate-150"
+    },
+    "text": {
+      "primary": "#F8FAFC",
+      "secondary": "#94A3B8",
+      "muted": "#64748B",
+      "inverse": "#0B1120"
+    },
+    "brand": {
+      "primary": "#3B82F6",
+      "primaryHover": "#2563EB",
+      "accent": "#93C5FD",
+      "highlight": "#EFF6FF"
+    },
+    "status": {
+      "good": "#10B981",
+      "moderate": "#F59E0B",
+      "poor": "#F97316",
+      "severe": "#EF4444"
+    },
+    "border": {
+      "default": "#1E293B",
+      "light": "#334155",
+      "active": "#3B82F6"
+    }
+  },
+  "typography": {
+    "headings": {
+      "fontFamily": "Manrope, sans-serif",
+      "weights": ["400", "700", "800"],
+      "tracking": "tracking-tight"
+    },
+    "body": {
+      "fontFamily": "IBM Plex Sans, monospace",
+      "weights": ["400", "500"]
+    },
+    "scales": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tighter leading-none font-bold",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight font-bold",
+      "h3": "text-xl sm:text-2xl tracking-tight font-semibold",
+      "h4": "text-lg sm:text-xl font-medium",
+      "body": "text-base leading-relaxed",
+      "small": "text-sm uppercase tracking-[0.2em] text-[#94A3B8]"
+    }
+  },
+  "spacing_and_layout": {
+    "general_philosophy": "Generous spacing. p-6, p-8, or p-12 for containers. Containers with borders must have internal padding.",
+    "grid_mode": "Mode B: The 'Control Room' Grid (For Dashboards/Analytics)",
+    "grid_classes": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6",
+    "card_style": "Grid Borders (The 'Technical' Look). Flat background (#111827), 1px solid border (#1E293B), no soft shadows. Sharp edges (rounded-none or max 4px)."
+  },
+  "components": {
+    "buttons": "Flat, solid colors for primary CTAs. Hover state must be lighter hue. Focus state needs ring-2 ring-blue-400.",
+    "cards": "Use pure HTML + Tailwind for structural layouts. Shadcn UI for interactive logic but stripped of Vercel-look (remove soft shadows, use sharp 1px borders).",
+    "charts": "Shadcn chart components (Recharts). Use dark theme. Remove axis lines, use dotted grid lines (border-border). Status colors for data points based on AQI level.",
+    "navigation": "Sticky Header with Crystal Glass (bg-[#0B1120]/70 backdrop-blur-xl border-b border-[#1E293B]). Must have visible links on desktop.",
+    "icons": "Phosphor Icons (@phosphor-icons/react) for dense dashboard layouts. Strict 24px or 20px sizes.",
+    "forms": "Shadcn Form/Input/Select components heavily customized to match the technical grid border style."
+  },
+  "media": {
+    "hero_image": {
+      "url": "https://images.pexels.com/photos/12141052/pexels-photo-12141052.jpeg",
+      "description": "Aerial view of an urban industrial area with smokestacks during nighttime. Sets atmospheric context for Air Quality.",
+      "category": "hero"
+    },
+    "landing_background": {
+      "url": "https://images.pexels.com/photos/6679353/pexels-photo-6679353.jpeg",
+      "description": "Dramatic night view of cityscape with smokestacks emitting smoke against dark cloudy sky. Use with heavy bg-black/60 overlay.",
+      "category": "background"
+    },
+    "partner_logo": {
+      "url": "https://images.pexels.com/photos/26576975/pexels-photo-26576975.jpeg",
+      "description": "Minimalist logo placeholder for PCB or partner references if needed.",
+      "category": "logo"
+    }
+  },
+  "motion_and_interaction": {
+    "hover_states": "ALWAYS explicitly set text color on hover. Example: hover:bg-[#1E293B] hover:text-white",
+    "transitions": "transition-all duration-200 ease-in-out",
+    "testing": "MANDATORY data-testid attribute on all interactive elements (buttons, inputs, links, tabs)."
+  },
+  "instructions_to_main_agent": [
+    "Read this file fully. All decisions must map back to these rules.",
+    "Follow 'Control Room' grid rules for both Student and PCB dashboards. Every pixel utilized. Use h-full on children.",
+    "Use 'Manrope' for all Headings and 'IBM Plex Sans' for body text. Do NOT use Inter or Roboto.",
+    "Implement the 'Grid Borders' surface strategy. Expose the skeleton. Avoid heavy soft shadows. Rely on 1px sharp borders.",
+    "AQI Status Colors are critical. Display these prominently in KPI cards: Good (#10B981), Moderate (#F59E0B), Poor (#F97316), Severe (#EF4444).",
+    "Ensure the hero section on the landing page uses the provided image with an overlay of bg-[#0B1120]/60 max.",
+    "Do not use transparent headers without blur. Use crystal glassmorphism for the sticky nav.",
+    "Use @phosphor-icons/react for iconography.",
+    "Ensure robust data-testid attributes for testing across the entire app.",
+    "Avoid Inter/Roboto. Avoid purple/teal gradients. Stick to the deep stratosphere blue palette provided here."
+  ]
+}
+

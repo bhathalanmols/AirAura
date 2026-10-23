@@ -1,0 +1,14 @@
+# Node & React
+node_modules/
+build/
+.DS_Store
+
+# Python & Backend
+__pycache__/
+*.pyc
+venv/
+env/
+
+# Secrets & Databases
+.env
+*.db
